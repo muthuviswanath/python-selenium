@@ -1,0 +1,17 @@
+1) To invoke browsers what are the steps that need to be followed?
+        1. Ensure that the specific browser is installed
+        2. Download the respective web drivers
+        3. Extract the files and store it in a location
+        4. Set the global path for the web drivers in the System Environment Settings
+        5. from slenium import the webdriver
+        6. Create the instance of the respective web drivers
+        7. Use get method to navigate to the respective url
+
+2) How will you instantiate webdriver?
+        <variablename> = webdriver.<Browser>()
+        Browser:
+            Firefox
+            Chrome
+            
+3) How will you open a web page?
+        driver.get("URL")
