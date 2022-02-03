@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Pentagon Practice Page</title>
+<style>
+.mouse-hover {
+		/* position: relative;
+		display: inline-block; */
+}
+/* mouse-hover Content (Hidden by Default) */
+.mouse-hover-content {
+		display: none;
+	position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the mouse-hover */
+.mouse-hover-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+}
+/* Change color of mouse-hover links on hover */
+.mouse-hover-content a:hover {
+	background-color: #f1f1f1
+}
+/* Show the mouse-hover menu on hover */
+.mouse-hover:hover .mouse-hover-content {
+		display: block;
+}
+/* Change the background color of the mouse-hover button when the mouse-hover content is shown */
+.mouse-hover:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+</style>
+</head>
+<body>
+<script>	var myWin;
+	function openWindow() {
+		myWin = window.open("https://www.google.com", "myWin", "width=1200, height=600, top=100, left=100, scrollbars=yes, resizable=yes");
+	}
+
+  function openTab() {
+    myWin = window.open("https://www.google.com", "_blank");
+  }
+
+   	function winFocus() {
+		myWin.focus();
+	}
+	function displayAlert() {
+		var value = document.getElementById("name").value;
+		alert("Hello " + value + ", Congratulations on your 2nd Year Work Anniversary ");
+		document.getElementById("name").value = "";
+	}
+	function displayConfirm() {
+		var value = document.getElementById("name").value;
+		confirm("Hello " + value + ", Are you sure you want to confirm?")
+		document.getElementById("name").value = "";
+	}
+	function hideElement() {
+		var x = document.getElementById("displayed-text");
+		//style.visibility = "hidden";
+		x.style.display = "none";
+	}
+	function showElement() {
+		var x = document.getElementById("displayed-text");
+		//style.visibility = "visible";
+		x.style.display = "block";
+	}
+</script>
+<h1>My Practice Page</h1>
+<div class="block large-row-spacer">
+	<div class="left-align" id="radio-btn-example">
+		<fieldset>
+			<legend>Radio Button Example</legend>
+			<label for="python">
+			<input id="pythonradio" value="python" name="language" type="radio"> Python
+			</label>
+			<label for="java">
+			<input id="javaradio" value="java" name="language" type="radio"> Java
+			</label>
+			<label for="csharp">
+			<input id="csharpradio" value="csharp" name="language" type="radio"> C Sharp
+			</label>
+		</fieldset>
+	</div>
+	<br/><br/>
+	<input class=>
+	<div class="cen-left-align" id="select-class-example">
+		<fieldset>
+			<legend>Select Country Example</legend>
+			<select id="countryselect" name="cars">
+				<option value="india">India</option>
+				<option value="pakistan">Pakistan</option>
+				<option value="bangladesh">Bangladesh</option>
+				<option value="nepal">Nepal</option>
+				<option value="china">China</option>
+				<option value="srilanka">Srilanka</option>
+
+			</select>
+		</fieldset>
+	</div>
+	<div class="cen-right-align">
+		<fieldset style="height: 102px">
+			<legend>Multiple Select Example</legend>
+			<select multiple="" size="5" id="multiple-select-example" name="multiple-select-example" style="height: 69px">
+				<option value="apple">Apple</option>
+				<option value="orange">Orange</option>
+				<option value="peach">Peach</option>
+				<option value="grapes">Grapes</option>
+				<option value="mangoes">Mangoes</option>
+				<option value="banana">Banana</option>
+				<option value="kiwi">Kiwi</option>
+				
+				
+			</select>
+		</fieldset>
+	</div>
+	<div class="right-align" id="checkbox-example">
+		<fieldset>
+			<legend>Checkbox Example</legend>
+			<label for="python">
+			<input id="pythoncheck" value="python" name="softwares" type="checkbox"> Python
+			</label>
+			<label for="selenium">
+			<input id="seleniumcheck" value="selenium" name="softwares" type="checkbox"> Selenium
+			</label>
+			<label for="appium">
+			<input id="appiumcheck" value="appium" name="softwares" type="checkbox"> Appium
+			</label>
+		</fieldset>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br><br><br>
+<div class="block large-row-spacer">
+	<div class="left-align">
+		<fieldset>
+			<legend>Switch Window Example</legend>
+			<button id="openwindow" class="btn-style class1" onclick="openWindow()">Open Window</button>
+		</fieldset>
+	</div>
+
+    <div class="cen-align">
+    <fieldset>
+      <legend>Switch Tab Example</legend>
+      <button id="openwindow" class="btn-style class1" onclick="openTab()">Open Tab</button>
+    </fieldset>
+  </div>
+
+	<div class="right-align">
+		<fieldset>
+			<legend>Switch To Alert Example</legend>
+			<input id="name" name="enter-name" class="inputs" placeholder="Enter Your Name" type="text">
+			<input id="alertbtn" class="btn-style" value="Alert" onclick="displayAlert()" type="submit">
+			<input id="confirmbtn" class="btn-style" value="Confirm" onclick="displayConfirm()" type="submit">
+		</fieldset>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br>
+<div class="block large-row-spacer">
+
+	<div class="left-align">
+		<fieldset>
+			<legend>Web Table Example</legend>
+			<table id="product" name="courses" class="table-display" border="1">
+			<tbody>
+			<tr>
+				<th>Author</th>
+				<th>Course</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>Muthu</td>
+				<td>Selenium WebDriver With Java</td>
+				<td>3500</td>
+			</tr>
+			<tr>
+				<td>Muthu</td>
+				<td>Python Programming Language</td>
+				<td>3000</td>
+			</tr>
+			<tr>
+				<td>Muthu</td>
+				<td>JavaScript Programming Language</td>
+				<td>2500</td>
+			</tr>
+			</tbody>
+			</table>
+		</fieldset>
+	</div>
+		<br/><br/>
+	<div>
+		<a class="mylinks" href="Index.html">Index</a>
+		<a class="mylinks" href="forgotpass.html">Forgot Password</a>
+		<br/><br/>
+		<a class="mylinks" href="login.html">Forgot Password</a>
+		<a class="mylinks" href="forgotpass.html">Forgot My Password</a>
+		<a class="mylinks" href="forgotpass.html">Forgot Your Password</a>
+
+
+	</div>
+	<br/><br/>
+	<div class="right-align">
+		<fieldset>
+			<legend>Element Displayed Example</legend>
+			<input id="hide-textbox" class="btn-style class2" value="Hide" onclick="hideElement()" type="submit">
+			<input id="show-textbox" class="btn-style class2" value="Show" onclick="showElement()" type="submit">
+			<br><br>
+			<input id="displayed-text" name="show-hide" class="inputs displayed-class" placeholder="Hide/Show Example" type="text">
+		</fieldset>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="block large-row-spacer">
+	<div class="left-align">
+		<fieldset style="margin-bottom:60px">
+			<legend>Mouse Hover Example</legend>
+			<div class="mouse-hover">
+				<button id="mousehover" class="dropbtn">Mouse Hover</button>
+				<div class="mouse-hover-content">
+					<a href="#top">Top</a>
+					<a href="demopage.html">Reload</a>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="block large-row-spacer">
+	<fieldset>
+		<legend>iFrame Example</legend>
+		<iframe id="courses-iframe" src="index.html" name="iframe-name" style="width: 100%; height: 600px" scrolling="yes" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0">
+					
+		</iframe>
+	</fieldset>
+</div>
+      
+      
+    
+</body>    
+  <script type="text/javascript">(function(){window['__CF$cv$params']={r:'5a66ca28ae44df3e',m:'0293b3d4cd78933d500326f9d470dd2e30897b39-1592669739-1800-Aez7BJOajwPG2Nj22U9H9XfMZ93O3/NUqUBbeFWcO76UCQZDwtX+xKIeSKqiol/hAT+Ey43HHWWkV3CVlrfrlZBgaYPwsIoAxbsUU54LlNm6bu4NtBs/Dag04nrxJ1ePDw==',s:[0xb026d171dc,0xc6e31769fb],}})();</script></body>
+</html>
